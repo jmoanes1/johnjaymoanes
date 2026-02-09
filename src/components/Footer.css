@@ -1,0 +1,157 @@
+/* Footer Component Styles */
+
+.footer {
+  background-color: rgba(15, 23, 42, 0.8);
+  border-top: 1px solid rgba(148, 163, 184, 0.1);
+  padding: var(--spacing-xl) 0;
+  margin-top: var(--spacing-2xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  opacity: 0.5;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.footer-text {
+  text-align: center;
+  flex: 1;
+}
+
+.footer-text p {
+  margin-bottom: var(--spacing-xs);
+  color: var(--text-muted-dark);
+  font-size: 0.95rem;
+  transition: color var(--transition-normal);
+}
+
+.footer-text:hover p {
+  color: var(--text-primary-dark);
+}
+
+.heart {
+  display: inline-block;
+  animation: heartbeat 1.5s ease-in-out infinite;
+  transition: transform var(--transition-fast);
+}
+
+.footer-text:hover .heart {
+  animation: heartbeat 0.8s ease-in-out infinite;
+}
+
+.footer-copyright {
+  font-size: 0.85rem !important;
+  color: var(--text-muted-dark) !important;
+}
+
+.footer-links {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.footer-link {
+  color: var(--text-muted-dark);
+  font-size: 0.95rem;
+  transition: all var(--transition-normal);
+  position: relative;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+}
+
+.footer-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  transform: translateX(-50%);
+  transition: width var(--transition-normal);
+}
+
+.footer-link:hover {
+  color: var(--accent-color);
+  background: rgba(56, 189, 248, 0.1);
+  transform: translateY(-2px);
+}
+
+.footer-link:hover::before {
+  width: 100%;
+}
+
+/* Heartbeat Animation */
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(1.2);
+  }
+  20%, 40% {
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 1024px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 768px) {
+  .footer {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-md);
+  }
+
+  .footer-links {
+    justify-content: center;
+  }
+
+  .footer-text p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 480px) {
+  .footer {
+    padding: var(--spacing-md) 0;
+  }
+
+  .footer-text p {
+    font-size: 0.85rem;
+  }
+
+  .footer-link {
+    font-size: 0.9rem;
+    padding: var(--spacing-xs);
+  }
+}
