@@ -18,6 +18,16 @@ const Projects = () => {
       liveUrl: 'https://table-support-system.vercel.app/',
       thumbnail: '/Screenshot 2026-02-09 153420.png',
     },
+    {
+      id: 2,
+      title: 'IT Support Ticket System',
+      description:
+       'IT Support provides technical assistance, troubleshooting, and maintenance for computer systems, networks, and software to ensure smooth and secure operations.',
+      techStack: ['Django', 'Python', 'HTML', 'CSS', 'JavaScripts', 'Postgre SQL'],
+      githubUrl: 'https://github.com/jmoanes1/table_support_system',
+      liveUrl: 'https://ticketssupport.onrender.com/login/',
+      thumbnail: './itsuport.png',
+    },
    
    
    

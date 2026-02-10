@@ -160,6 +160,39 @@
   margin-bottom: var(--spacing-2xl);
 }
 
+.btn-resume {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  border: 2px solid rgba(148, 163, 184, 0.3);
+  background: rgba(30, 41, 59, 0.5);
+  color: var(--text-primary-dark);
+  text-decoration: none;
+}
+
+.btn-resume:hover {
+  background: rgba(37, 99, 235, 0.1);
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
+}
+
+.btn-resume:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.btn-resume svg {
+  flex-shrink: 0;
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
   position: absolute;
@@ -256,7 +289,8 @@
     gap: var(--spacing-sm);
   }
 
-  .hero-cta .btn {
+  .hero-cta .btn,
+  .hero-cta .btn-resume {
     width: 100%;
     max-width: 300px;
   }
