@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
@@ -15,8 +14,10 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <main>
+      <a href="#main-content" className="skip-link">
+        Skip to main content
+      </a>
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <About />
         <Skills />

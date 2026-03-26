@@ -13,12 +13,6 @@ const Footer = () => {
       <div className="container">
         <div className="footer-content">
           <div className="footer-text">
-            <p>
-              Designed & Built with{' '}
-              <span className="heart" aria-label="love">
-              </span>{' '}
-              by John Jay Moanes
-            </p>
             <p className="footer-copyright">
               © {currentYear} All rights reserved.
             </p>

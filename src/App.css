@@ -1,9 +1,11 @@
-/* App-specific styles */
+/* App shell — white field */
 .App {
   min-height: 100vh;
+  min-height: 100dvh;
   background-color: var(--bg-dark);
 }
 
 main {
   position: relative;
+  outline: none;
 }

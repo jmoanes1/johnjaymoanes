@@ -17,6 +17,8 @@ const Skills = () => {
     'PostgreSQL',
     'Git',
     'AWS',
+    'Node.js',
+    
   ];
 
   return (
